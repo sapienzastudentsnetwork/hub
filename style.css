@@ -1,0 +1,110 @@
+/* Copyright © 2023 Matteo Collica (Matypist) */
+
+/* https://github.com/sapienzastudentsnetwork/sapienzastudentsnetwork.github.io */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #132441 !important;
+}
+
+a, a:hover, a:active, a:visited {
+    color: white;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: transform 150ms;
+}
+
+.translate-below:hover {
+    transform: translateY(6px);
+}
+
+.translate-right:hover {
+    transform: translateX(6px);
+}
+   
+.translate-left:hover {
+    transform: translateX(-6px);
+}
+
+.translate-above:hover {
+    transform: translateY(-6px);
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.bi {
+    color: white;
+}
+
+.large-icon {
+    font-size: 5rem;
+}
+
+.icon-left {
+    margin-right: 5px;
+}
+
+.icon-right {
+    margin-left: 5px;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.img-fluid {
+    transition: transform 0.5s ease;
+}
+
+.img-fluid:hover {
+    animation: rotateAnimation 1.5s linear 0.75s;
+}
+
+@media screen and (max-width: 767px) {
+    .translate-below:hover, .translate-right:hover, .translate-left:hover, .translate-above:hover {
+        transform: translateY(-6px);
+    }
+
+    .icon-left {
+        margin-right: 15px;
+    }
+    
+    .icon-right {
+        margin-left: 15px;
+    }
+
+    @keyframes rotateAnimation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(180deg);
+        }
+
+        75% {
+            transform: rotate(180deg); /* Pausa dopo la rotazione di 180 gradi */
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    .img-fluid:hover {
+        animation: rotateAnimation 1.5s linear 0.75s;
+    }
+}
