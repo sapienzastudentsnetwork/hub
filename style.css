@@ -13,26 +13,34 @@ body {
 }
 
 a, a:hover, a:active, a:visited {
-    color: white !important;
     text-decoration: none !important;
     cursor: pointer;
     transition: transform 150ms;
+    transition: filter 0.3s ease;
+}
+
+a:hover {
+    filter: brightness(0.9); /* Darkens the element by reducing brightness */
+}
+
+.white-color {
+    color: white !important;
 }
 
 .translate-below:hover {
-    transform: translateY(6px);
+    transform: translateY(8px);
 }
 
 .translate-right:hover {
-    transform: translateX(6px);
+    transform: translateX(8px);
 }
    
 .translate-left:hover {
-    transform: translateX(-6px);
+    transform: translateX(-8px);
 }
 
 .translate-above:hover {
-    transform: translateY(-6px);
+    transform: translateY(-8px);
 }
 
 .bold-text {
