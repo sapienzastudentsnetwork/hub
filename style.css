@@ -23,6 +23,14 @@ a:hover {
     filter: brightness(0.9); /* Darkens the element by reducing brightness */
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 12vh);
+}
+
 .white-color {
     color: white !important;
 }
@@ -59,7 +67,7 @@ a:hover {
     color: white;
 }
 
-.row {
+.middle-row {
     margin-top: 4vh !important;
 }
 
@@ -98,10 +106,10 @@ a:hover {
 @media (min-width: 768px) {
     .navbar {
         font-size: 1vw;
-    }
+    }    
 
     @media (min-width: 1921px) {
-        .row {
+        .middle-row {
             margin-top: 17.5vh !important;
         }
 
@@ -116,7 +124,7 @@ a:hover {
     }
 
     @media (min-height: 701px) and (max-height: 841px) {
-        .row {
+        .middle-row {
             margin-top: 2vh !important;
         }
 
@@ -151,7 +159,7 @@ a:hover {
 }
 
 @media (max-width: 767px) {
-    .row {
+    .middle-row {
         margin-top: 3vh !important;
     }
 
@@ -165,7 +173,7 @@ a:hover {
     }
 
     @media (min-width: 407px) and (max-width: 500px) {
-        .row {
+        .middle-row {
             margin-top: 1.5vh !important;
         }
 
@@ -180,7 +188,7 @@ a:hover {
     }
 
     @media (min-width: 501px) and (max-width: 600px) {
-        .row {
+        .middle-row {
             margin-top: 2vh !important;
         }
 
@@ -195,7 +203,7 @@ a:hover {
     }
 
     @media (min-width: 601px) and (max-width: 700px) {
-        .row {
+        .middle-row {
             margin-top: 1vh !important;
         }
 
@@ -210,7 +218,7 @@ a:hover {
     }
 
     @media (min-width: 701px) {
-        .row {
+        .middle-row {
             margin-top: 0.5vh !important;
         }
 
@@ -302,7 +310,7 @@ a:hover {
 }
 
 @media (max-width: 406px) {
-    .row {
+    .middle-row {
         margin-top: 4vh !important;
     }
 
