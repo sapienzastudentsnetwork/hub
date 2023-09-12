@@ -36,43 +36,43 @@
             </div>
         </nav>
 
-        <div class="container text-center align-items-center">
+        <div class="container text-center">
             <!-- Canale Telegram -->
             <a class="row translate-below white-color" href="https://telegram.me/SapienzaStudentsNetwork">
-                <div class="col-md-12 bold-text">
+                <div class="bold-text">
                     <span class="fs-3">CANALE TELEGRAM</span><br>
                     <span class="fs-4">Segui il canale Telegram</span>
                 </div>
 
-                <i class="bi bi-telegram icon-size icon-center"></i>
+                <i class="bi bi-telegram"></i>
             </a>
 
             <!-- Gruppi, Immagine e Server Discord -->
-            <div class="row align-items-center">
+            <div id="middlerow" class="row align-items-center">
                 <!-- Gruppi -->
-                <a class="col-md-4 groups-justify-content d-flex white-color align-items-center translate-right" href="https://telegram.me/SapienzaStudentsBot">
-                    <div class="col-md-10 bold-text">
+                <a id="groups" class="d-flex white-color translate-right" href="https://telegram.me/SapienzaStudentsBot">
+                    <div id="groups_text" class="bold-text groups-justify-content">
                         <span class="fs-3">GRUPPI</span><br>
                         <span class="fs-4">Esplora i gruppi Telegram</span>
                     </div>
 
-                    <div class="col-md-6 d-flex align-items-center groups-justify-content">
-                        <i class="bi bi-people icon-size icon-right"></i>
+                    <div id="groups_icon" class="d-flex groups-justify-content">
+                        <i class="bi bi-people"></i>
                     </div>
                 </a>
 
                 <!-- Immagine -->
-                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <div id="image" class="d-flex justify-content-center">
                     <img src="SSN_logo.png" alt="Immagine" class="img-fluid">
                 </div>
 
                 <!-- Server Discord -->
-                <a class="col-md-4 discord-justify-content d-flex white-color align-items-center translate-left" href="https://discord.sapienzastudents.net">
-                    <div class="col-md-6 d-flex align-items-center discord-justify-content">
-                        <i class="bi bi-discord icon-size icon-left"></i>
+                <a id="discord" class="d-flex white-color translate-left" href="https://discord.sapienzastudents.net">
+                    <div id="discord_icon" class="d-flex discord-justify-content">
+                        <i class="bi bi-discord"></i>
                     </div>
 
-                    <div class="col-md-10 bold-text">
+                    <div id="discord_text" class="bold-text discord-justify-content">
                         <span class="fs-3">DISCORD</span><br>
                         <span class="fs-4">Unisciti al server Discord</span>
                     </div>
@@ -81,13 +81,47 @@
         
             <!-- Organizzazione GitHub -->
             <a class="row white-color translate-above" href="https://github.com/SapienzaStudentsNetwork">
-                <i class="bi bi-github icon-size icon-center mb-0"></i>
+                <i class="bi bi-github"></i>
 
-                <div class="col-md-12 bold-text">
+                <div class="bold-text">
                     <span class="fs-3">ORGANIZZAZIONE GITHUB</span><br>
                     <span class="fs-4">Visita le nostre repository</span>
                 </div>
             </a>
         </div>
     </body>
+
+    <script>
+        function checkViewportSize() {
+        const viewportWidth = window.innerWidth;
+        const elementIds = ["groups", "image", "discord"];
+
+        const middlerowelement = document.getElementById("middlerow");
+
+        if (viewportWidth < 769) {
+            elementIds.forEach((elementId) => {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.classList.add("row");
+                element.classList.remove("col");
+            }
+            });
+
+            middlerowelement.classList.remove("row");
+        } else {
+            elementIds.forEach((elementId) => {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.classList.remove("row");
+                element.classList.add("col");
+            }
+            });
+
+            middlerowelement.classList.add("row");
+        }
+        }
+
+        window.addEventListener("load", checkViewportSize);
+        window.addEventListener("resize", checkViewportSize);
+    </script>
 </html>
