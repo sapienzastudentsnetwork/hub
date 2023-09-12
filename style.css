@@ -164,7 +164,7 @@ a:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: calc(100vh - 16vh);
+        height: calc(100vh - 8vh);
     }
 
     .middle-row {
