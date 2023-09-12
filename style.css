@@ -23,10 +23,6 @@ a:hover {
     filter: brightness(0.9); /* Darkens the element by reducing brightness */
 }
 
-.navbar {
-    font-size: 2vh;
-}
-
 .white-color {
     color: white !important;
 }
@@ -80,6 +76,11 @@ a:hover {
 
 .img-fluid:hover {
     animation: rotateAnimation 1.5s linear 0.75s;
+}
+
+.navbar {
+    height: 6vh;
+    font-size: 2vh;
 }
 
 .container {
